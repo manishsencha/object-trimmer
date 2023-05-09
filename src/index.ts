@@ -1,9 +1,9 @@
-function trimObject(obj) {
-  if (typeof obj == "object") {
+function trimObject(obj: any) {
+  if (typeof obj === 'object') {
     Object.entries(obj).map(([key, value]) => {
-      if (typeof value == "object") {
+      if (typeof value === 'object') {
         return trimObject(value);
-      } else if (typeof value == "string") {
+      } else if (typeof value === 'string') {
         obj[key] = value.trim();
       }
     });
