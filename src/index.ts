@@ -1,5 +1,5 @@
 function trimObject(obj: any) {
-  if (typeof obj === 'object') {
+  if (obj && typeof obj === 'object') {
     Object.entries(obj).map(([key, value]) => {
       if (typeof value === 'object') {
         return trimObject(value);
